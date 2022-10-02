@@ -22,7 +22,18 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+
 ## Description
+Service API for Managing Article such as CRUD,Search, and also Comment Articles.
+Creator : Muhammad Athaberyl Ramadhyli Adl
+
+UDACODING BOOTCAMP 2022 PROJECT TASK 1
+
+## Demo Video
+<a href="https://www.youtube.com/watch?v=WBx1ktskNhg">https://www.youtube.com/watch?v=WBx1ktskNhg</a>
+
+## API Documentation 
+<a href="https://documenter.getpostman.com/view/11542116/2s83tGoByS">Click Here</a>
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
@@ -57,7 +68,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).

@@ -1,7 +1,7 @@
 import { Article } from "src/article/entities/article.entity"
 import { Comment } from "src/comment/entities/comment.entity"
-import { CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn, OneToMany, Column } from "typeorm"
-
+import { CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn, OneToMany, Column, BeforeInsert } from "typeorm"
+import * as bcrypt from 'bcrypt';
 @Entity()
 export class User {
 
@@ -13,6 +13,12 @@ export class User {
     email:string
     @Column()
     password:string
+    
+    @BeforeInsert()
+    async hashPassword() {
+      this.password = await bcrypt.hash(this.password,10);
+    }
+
     @Column({
         name:"profile_picture",
         type:'text',
