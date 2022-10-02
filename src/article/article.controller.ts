@@ -1,6 +1,8 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete , Query , ParseIntPipe } from '@nestjs/common';
+
 import { ArticleService } from './article.service';
 import { CreateArticleDto } from './dto/create-article.dto';
+import { FilterArticleDto } from './dto/filter-article.dto';
 import { UpdateArticleDto } from './dto/update-article.dto';
 
 @Controller('article')
@@ -13,13 +15,17 @@ export class ArticleController {
   }
 
   @Get()
-  findAll() {
+  getArticles(@Query() filterArticleDto:FilterArticleDto) {
+
+    if(Object.keys(filterArticleDto).length > 0){
+      return this.articleService.getArticleFilter(filterArticleDto);
+    }
     return this.articleService.getArticles();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.articleService.getArticle(+id);
+  getArticle(@Param('id',ParseIntPipe) id: number) {
+    return this.articleService.getArticle(id);
   }
 
   @Patch(':id')

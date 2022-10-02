@@ -25,14 +25,6 @@ export class Article {
     })
     imageCover:string
 
-    categoryId:string
-
-    @Column({
-        name:'user_id'
-    })
-    userId:string
-
-
     @CreateDateColumn({
         name:"created_at",
         type:"timestamp", 

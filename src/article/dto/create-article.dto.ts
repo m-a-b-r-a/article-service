@@ -4,5 +4,5 @@ export class CreateArticleDto {
     description: string
     summary: string
     category_id: number
-    user_id:string
+    created_by:number
 }
