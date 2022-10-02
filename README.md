@@ -33,9 +33,7 @@ UDACODING BOOTCAMP 2022 PROJECT TASK 1
 <a href="https://www.youtube.com/watch?v=WBx1ktskNhg">https://www.youtube.com/watch?v=WBx1ktskNhg</a>
 
 ## API Documentation 
-<a href="https://documenter.getpostman.com/view/11542116/2s83tGoByS">Click Here</a>
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<a href="https://documenter.getpostman.com/view/11542116/2s83tGoByS">https://documenter.getpostman.com/view/11542116/2s83tGoByS</a>
 
 ## Installation
 
