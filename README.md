@@ -22,7 +22,8 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-
+## ERD (Relasi Database)
+<iframe width="560" height="315" src='https://dbdiagram.io/embed/6338d5e57b3d2034ff0372d3'> </iframe>
 ## Description
 Service API for Managing Article such as CRUD,Search, and also Comment Articles.
 Creator : Muhammad Athaberyl Ramadhyli Adl

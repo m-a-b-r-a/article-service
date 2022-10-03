@@ -41,8 +41,8 @@ export class ArticleService {
   });
   }
 
-  update(id: number, updateArticleDto: UpdateArticleDto) {
-    return `This action updates a #${id} article`;
+  async update(id: number, updateArticleDto: Partial<UpdateArticleDto>) {
+    await this.articleRepo.update({id},updateArticleDto);
   }
 
   remove(id: number) {
