@@ -24,8 +24,9 @@
 
 ## ERD (Relasi Database)
 <a href="https://dbdiagram.io/d/6338d5e57b3d2034ff0372d3">
-<img src="https://drive.google.com/file/d/1mzu3Bsd-UW9unSjVTAJHZgv-MfVy2Bav/view?usp=sharing" width="600" alt="ERD" />
+<img src="https://i.ibb.co/pR7y63h/simple-article.png" width="600" alt="ERD" />
 </a>
+
 ## Description
 Service API for Managing Article such as CRUD,Search, and also Comment Articles.
 Creator : Muhammad Athaberyl Ramadhyli Adl
