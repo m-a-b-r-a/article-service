@@ -43,9 +43,11 @@ export class ArticleService {
 
   async update(id: number, updateArticleDto: Partial<UpdateArticleDto>) {
     await this.articleRepo.update({id},updateArticleDto);
+    return this.getArticle(id);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} article`;
+  async remove(id: number) {
+  await this.articleRepo.delete({id});
+  return {deleted:true};
   }
 }

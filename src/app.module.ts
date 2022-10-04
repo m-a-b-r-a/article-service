@@ -11,6 +11,9 @@ import { User } from './user/entities/user.entity';
 import { Comment } from './comment/entities/comment.entity';
 import { Article } from './article/entities/article.entity';
 import { Category } from './category/entities/category.entity';
+import { APP_FILTER } from '@nestjs/core';
+import { HttpExceptionFilter } from './shared/http-error-filter';
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     name: 'default',
@@ -24,8 +27,11 @@ import { Category } from './category/entities/category.entity';
     synchronize: true, //membuat schema database setiap server di restart
     logging: true, //supaya perubahan data terlihat dalam log
     dropSchema: true, // menghapus schema database ketika server restart
-  }), ArticleModule, CategoryModule, CommentModule, UserModule],
+  }), ArticleModule, CategoryModule, CommentModule, UserModule, AuthModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [{
+    provide: APP_FILTER,
+    useClass: HttpExceptionFilter
+  },AppService],
 })
 export class AppModule {}

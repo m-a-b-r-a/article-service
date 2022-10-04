@@ -17,8 +17,8 @@ export class UserService {
     return newUser;
   }
 
-  findAll() {
-    return this.userRepo.find();
+  async findAll() {
+    return await this.userRepo.find();
   }
 
   // findFilteredUser(filterUserDto:FilterUserDto){
@@ -34,15 +34,17 @@ export class UserService {
   //   }
   // }
 
-  findOne(id: number) {
-    return this.userRepo.find({where:{id}});
+  async findOne(id: number) {
+    return await this.userRepo.find({where:{id}});
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async update(id: number, updateUserDto: Partial<UpdateUserDto>) {
+    await this.userRepo.update({id},UpdateUserDto);
+    return await this.findOne(id);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async remove(id: number) {
+    await this.userRepo.delete({id});
+    return {deleted:true};
   }
 }
